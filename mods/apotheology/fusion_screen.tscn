@@ -1,0 +1,769 @@
+[gd_scene format=3 uid="uid://i5sa1h6llf0y"]
+
+[ext_resource type="Script" uid="uid://b8brf53rqxm0p" path="res://mods/apotheology/fusion_screen.gd" id="1_8xmnw"]
+[ext_resource type="Script" uid="uid://cq7c5aoca5lpo" path="res://mods/apotheology/fusion_information.gd" id="2_mbask"]
+[ext_resource type="Shader" uid="uid://c54wapnqwhxec" path="res://main/ui/menu/game_menu/fusion_screen/fusion_water.gdshader" id="3_ooslo"]
+[ext_resource type="Texture2D" uid="uid://dsmh2ngbtowe7" path="res://mods/apotheology/textures/projector.png" id="4_4uoky"]
+[ext_resource type="PackedScene" uid="uid://bawrkr2r0eisa" path="res://main/ui/menu/game_menu/rosary_screen/bead_light/bead_light.tscn" id="5_fuhhw"]
+[ext_resource type="Shader" uid="uid://0ot6o1fl78sn" path="res://main/ui/menu/game_menu/rosary_screen/bead_light/radial_ray.gdshader" id="6_kovcv"]
+[ext_resource type="Texture2D" uid="uid://dekcangcubudj" path="res://mods/apotheology/textures/projector2.png" id="7_o61o4"]
+[ext_resource type="PackedScene" uid="uid://bmac2vj8ciwwj" path="res://main/ui/menu/game_menu/fusion_screen/knob/knob.tscn" id="8_3urhr"]
+[ext_resource type="Texture2D" uid="uid://dj4w0t75gfv5p" path="res://main/ui/menu/game_menu/fusion_screen/textures/color_indicator.png" id="9_20phi"]
+[ext_resource type="Script" uid="uid://bmwqxh358wewl" path="res://mods/apotheology/neighbor_icons.gd" id="10_ngtur"]
+[ext_resource type="Script" uid="uid://u8bq78pe4lki" path="res://main/ui/menu/game_menu/fusion_screen/fusion_wheel.gd" id="11_2mcib"]
+[ext_resource type="Shader" uid="uid://guu27y0nbncs" path="res://main/ui/menu/game_menu/fusion_screen/plasma.gdshader" id="12_pcoak"]
+[ext_resource type="Texture2D" uid="uid://4m13i1bbra5a" path="res://main/ui/menu/game_menu/fusion_screen/textures/tube.png" id="13_k3g7a"]
+[ext_resource type="Texture2D" uid="uid://osxpg8n21yw6" path="res://mods/apotheology/textures/tube2.png" id="14_vde41"]
+[ext_resource type="Texture2D" uid="uid://clhblbg6i32oy" path="res://main/ui/menu/game_menu/fusion_screen/textures/triangle.png" id="15_6q0t5"]
+[ext_resource type="Texture2D" uid="uid://ce2j5735stuve" path="res://main/ui/menu/game_menu/fusion_screen/textures/ring.png" id="16_lek0i"]
+[ext_resource type="Script" uid="uid://b6oilp2k4mnsw" path="res://mods/apotheology/source_positions.gd" id="17_p73um"]
+[ext_resource type="Script" uid="uid://dlnqr0ev71tg0" path="res://main/ui/menu/game_menu/inventory_widget/fixed_position_inventory_widget.gd" id="18_gs2ni"]
+[ext_resource type="PackedScene" uid="uid://byrjvga4jcy7j" path="res://main/ui/menu/game_menu/inventory_widget/inventory_slot/inventory_slot.tscn" id="19_7w5va"]
+[ext_resource type="Texture2D" uid="uid://ciiqwf52sawfg" path="res://main/ui/menu/game_menu/fusion_screen/textures/button.png" id="20_2byn6"]
+[ext_resource type="Texture2D" uid="uid://dkv4h42gqyesc" path="res://main/ui/menu/game_menu/fusion_screen/textures/pressed_button.png" id="21_7tuu0"]
+[ext_resource type="Texture2D" uid="uid://bj7awsjejfkfe" path="res://main/ui/menu/game_menu/fusion_screen/textures/hover_button.png" id="22_kcxn5"]
+[ext_resource type="AudioStream" uid="uid://brfaj6k87orve" path="res://main/ui/theme/sound/heavy_button_up.tres" id="23_t5bch"]
+[ext_resource type="Texture2D" uid="uid://dwhhja5ba3fy8" path="res://mods/apotheology/textures/mult_button.png" id="24_b7px8"]
+[ext_resource type="Texture2D" uid="uid://bjddekicc7d3r" path="res://mods/apotheology/textures/mult_pressed_button.png" id="25_pkp1w"]
+[ext_resource type="Texture2D" uid="uid://t2uny2bgk4h8" path="res://mods/apotheology/textures/mult_hover_button.png" id="26_mt4uw"]
+[ext_resource type="Texture2D" uid="uid://n4jspr78rac4" path="res://mods/apotheology/textures/refill_button.png" id="27_im3tx"]
+[ext_resource type="Texture2D" uid="uid://cgutx3urv0xd4" path="res://mods/apotheology/textures/refill_pressed_button.png" id="28_xp7fi"]
+[ext_resource type="Texture2D" uid="uid://cy066vgd2c26a" path="res://mods/apotheology/textures/refill_hover_button.png" id="29_vpw68"]
+[ext_resource type="Shader" uid="uid://btc06y23myc4w" path="res://main/ui/menu/game_menu/fusion_screen/fusion_prediction_icon.gdshader" id="30_pd528"]
+[ext_resource type="Texture2D" uid="uid://cx71emha0tsdi" path="res://main/items/data/food/icons/raw_sheep_flesh.png" id="31_h6sbs"]
+[ext_resource type="Texture2D" uid="uid://dl0q8nkfa32if" path="res://main/ui/menu/game_menu/fusion_screen/textures/mask.png" id="32_55had"]
+[ext_resource type="Script" uid="uid://bkc0vodrcvcco" path="res://main/ui/menu/game_menu/fusion_screen/fusion_prediction_icon.gd" id="33_afi5g"]
+[ext_resource type="AudioStream" uid="uid://uw6yef64yni7" path="res://main/ui/theme/sound/heavy_button_down.tres" id="34_vtn4h"]
+[ext_resource type="AudioStream" uid="uid://d4nu8aauvnhlt" path="res://main/ui/menu/game_menu/fusion_screen/sounds/fuse.wav" id="35_m71to"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_blln0"]
+noise_type = 2
+seed = 8
+frequency = 0.0045
+fractal_type = 2
+fractal_lacunarity = 1.91
+fractal_gain = 1.195
+cellular_jitter = 1.09
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 31.455
+domain_warp_fractal_octaves = 6
+domain_warp_fractal_gain = 0.785
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_wpb2t"]
+noise = SubResource("FastNoiseLite_blln0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v4i17"]
+shader = ExtResource("3_ooslo")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_wpb2t")
+shader_parameter/flitter_speed = 2.385
+shader_parameter/flavor = -0.07
+shader_parameter/bit_depth = 12.0
+shader_parameter/alpha_offset = 0.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bco3"]
+load_path = "res://.godot/imported/background.png-6fbdade0cd40054fbd0c9389d22fc01b.ctex"
+
+[sub_resource type="Gradient" id="Gradient_s741f"]
+offsets = PackedFloat32Array(0, 0.787966, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2r0sm"]
+gradient = SubResource("Gradient_s741f")
+fill_from = Vector2(0.182336, 1)
+fill_to = Vector2(0, 0.002849)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v5qf0"]
+shader = ExtResource("6_kovcv")
+shader_parameter/gradient = SubResource("GradientTexture2D_2r0sm")
+shader_parameter/spread = 0.375
+shader_parameter/cutoff = 0.645
+shader_parameter/speed = 1.075
+shader_parameter/ray1_density = 8.035
+shader_parameter/ray2_density = 25.995
+shader_parameter/ray2_intensity = 0.43
+shader_parameter/core_intensity = 3.955
+shader_parameter/hdr = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lg1jf"]
+shader = ExtResource("3_ooslo")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_wpb2t")
+shader_parameter/flitter_speed = 2.385
+shader_parameter/flavor = 0.18
+shader_parameter/bit_depth = 12.0
+shader_parameter/alpha_offset = 1.1
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_r30io"]
+seed = 270
+frequency = 0.0021
+fractal_lacunarity = 2.305
+fractal_gain = 0.63
+domain_warp_enabled = true
+domain_warp_frequency = -0.015
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ftwjj"]
+noise = SubResource("FastNoiseLite_r30io")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ftwjj"]
+shader = ExtResource("12_pcoak")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_ftwjj")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/offset = Vector2(7.41, 5.91)
+shader_parameter/scale = 9.925
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7y0q4"]
+shader = ExtResource("3_ooslo")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_wpb2t")
+shader_parameter/flitter_speed = 2.385
+shader_parameter/flavor = -0.07
+shader_parameter/bit_depth = 12.0
+shader_parameter/alpha_offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_atidy"]
+shader = ExtResource("3_ooslo")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_wpb2t")
+shader_parameter/flitter_speed = 0.0
+shader_parameter/flavor = 0.0
+shader_parameter/bit_depth = 12.0
+shader_parameter/alpha_offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wpb2t"]
+shader = ExtResource("3_ooslo")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_wpb2t")
+shader_parameter/flitter_speed = 0.165
+shader_parameter/flavor = 0.155
+shader_parameter/bit_depth = 12.0
+shader_parameter/alpha_offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_imtkg"]
+shader = ExtResource("3_ooslo")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_wpb2t")
+shader_parameter/flitter_speed = 2.385
+shader_parameter/flavor = -0.07
+shader_parameter/bit_depth = 12.0
+shader_parameter/alpha_offset = 0.0
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_atidy"]
+noise_type = 2
+seed = 8
+frequency = 0.0045
+fractal_type = 2
+fractal_lacunarity = 1.91
+fractal_gain = 1.195
+cellular_jitter = 1.09
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 31.455
+domain_warp_fractal_octaves = 6
+domain_warp_fractal_gain = 0.785
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_larfn"]
+noise = SubResource("FastNoiseLite_atidy")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_whhlx"]
+shader = ExtResource("3_ooslo")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_larfn")
+shader_parameter/flitter_speed = 2.385
+shader_parameter/flavor = 0.13
+shader_parameter/bit_depth = 12.0
+shader_parameter/alpha_offset = 0.75
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_r483y"]
+frequency = 0.0024
+fractal_type = 2
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_frequency = 0.01
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mucnm"]
+noise = SubResource("FastNoiseLite_r483y")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3niuq"]
+shader = ExtResource("30_pd528")
+shader_parameter/icon = ExtResource("31_h6sbs")
+shader_parameter/warp_texture = SubResource("NoiseTexture2D_mucnm")
+shader_parameter/mask = ExtResource("32_55had")
+shader_parameter/alpha = 0.0
+shader_parameter/intensity = 0.15
+shader_parameter/tint_color = Color(1, 1, 1, 1)
+shader_parameter/tint_amount = 0.25
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_r30io"]
+random_pitch = 1.05
+streams_count = 1
+stream_0/stream = ExtResource("35_m71to")
+
+[node name="FusionScreen" type="Control" unique_id=2102222938]
+custom_minimum_size = Vector2(190, 80)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 190.0
+offset_bottom = 80.0
+size_flags_horizontal = 6
+size_flags_vertical = 8
+script = ExtResource("1_8xmnw")
+
+[node name="FusionControl" type="Control" parent="." unique_id=1607975926]
+anchors_preset = 0
+offset_right = 190.0
+
+[node name="FusionInformation" type="Control" parent="FusionControl" unique_id=269517780]
+unique_name_in_owner = true
+modulate = Color(0.814062, 0.814062, 0.814062, 1)
+anchors_preset = 0
+offset_left = 31.0
+offset_top = -1.5
+offset_right = 71.0
+offset_bottom = 38.5
+script = ExtResource("2_mbask")
+
+[node name="Background" type="TextureRect" parent="FusionControl/FusionInformation" unique_id=1296241480]
+material = SubResource("ShaderMaterial_v4i17")
+layout_mode = 0
+offset_left = -67.0
+offset_top = 3.5
+offset_right = 23.0
+offset_bottom = 60.5
+texture = SubResource("CompressedTexture2D_3bco3")
+stretch_mode = 2
+
+[node name="Projector" type="TextureRect" parent="FusionControl/FusionInformation" unique_id=326894938]
+material = SubResource("ShaderMaterial_v4i17")
+layout_mode = 0
+offset_left = 23.0
+offset_top = 75.5
+offset_right = 42.0
+offset_bottom = 82.5
+mouse_filter = 2
+texture = ExtResource("4_4uoky")
+stretch_mode = 2
+
+[node name="TagLight" parent="FusionControl/FusionInformation/Projector" unique_id=1385356561 instance=ExtResource("5_fuhhw")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 0.627451)
+material = SubResource("ShaderMaterial_v5qf0")
+position = Vector2(2, 3.5)
+scale = Vector2(0.116, 0.116)
+
+[node name="Projector2" type="TextureRect" parent="FusionControl/FusionInformation" unique_id=1935930872]
+material = SubResource("ShaderMaterial_v4i17")
+layout_mode = 0
+offset_left = 164.0
+offset_top = 49.5
+offset_right = 203.0
+offset_bottom = 56.5
+rotation = -3.141592653589793
+mouse_filter = 2
+texture = ExtResource("7_o61o4")
+stretch_mode = 2
+
+[node name="NeighborsLight" parent="FusionControl/FusionInformation/Projector2" unique_id=2114348323 instance=ExtResource("5_fuhhw")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 0.627451)
+material = SubResource("ShaderMaterial_v5qf0")
+position = Vector2(2, 3.5)
+scale = Vector2(0.116, 0.116)
+
+[node name="Knobs" type="Control" parent="FusionControl/FusionInformation" unique_id=860845643]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -19.0
+offset_top = -7.5
+offset_right = 21.0
+offset_bottom = 32.5
+
+[node name="Knob" parent="FusionControl/FusionInformation/Knobs" unique_id=152884791 instance=ExtResource("8_3urhr")]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 34.0
+offset_right = 66.0
+offset_bottom = 114.0
+
+[node name="Knob2" parent="FusionControl/FusionInformation/Knobs" unique_id=986848825 instance=ExtResource("8_3urhr")]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 34.0
+offset_right = 79.0
+offset_bottom = 114.0
+
+[node name="Knob3" parent="FusionControl/FusionInformation/Knobs" unique_id=1668122919 instance=ExtResource("8_3urhr")]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 49.0
+offset_right = 59.0
+offset_bottom = 129.0
+
+[node name="Knob4" parent="FusionControl/FusionInformation/Knobs" unique_id=1157409620 instance=ExtResource("8_3urhr")]
+layout_mode = 0
+offset_left = 7.00001
+offset_top = 49.0
+offset_right = 71.99996
+offset_bottom = 129.0
+
+[node name="Knob5" parent="FusionControl/FusionInformation/Knobs" unique_id=855035448 instance=ExtResource("8_3urhr")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 49.0
+offset_right = 85.0
+offset_bottom = 129.0
+
+[node name="Knob6" parent="FusionControl/FusionInformation/Knobs" unique_id=1921629874 instance=ExtResource("8_3urhr")]
+layout_mode = 0
+offset_left = -45.0
+offset_top = 16.0
+offset_right = 20.0
+offset_bottom = 96.0
+
+[node name="Knob7" parent="FusionControl/FusionInformation/Knobs" unique_id=339071743 instance=ExtResource("8_3urhr")]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 16.0
+offset_right = 33.0
+offset_bottom = 96.0
+
+[node name="Knob8" parent="FusionControl/FusionInformation/Knobs" unique_id=1604383743 instance=ExtResource("8_3urhr")]
+layout_mode = 0
+offset_left = -19.0
+offset_top = 16.0
+offset_right = 46.0
+offset_bottom = 96.0
+
+[node name="Knob9" parent="FusionControl/FusionInformation/Knobs" unique_id=1734469317 instance=ExtResource("8_3urhr")]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 16.0
+offset_right = 59.0
+offset_bottom = 96.0
+
+[node name="Knob10" parent="FusionControl/FusionInformation/Knobs" unique_id=1546055189 instance=ExtResource("8_3urhr")]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 96.0
+
+[node name="Knob11" parent="FusionControl/FusionInformation/Knobs" unique_id=141229007 instance=ExtResource("8_3urhr")]
+modulate = Color(1.5, 1.5, 1.5, 1)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 85.0
+offset_bottom = 96.0
+
+[node name="Knob12" parent="FusionControl/FusionInformation/Knobs" unique_id=83160307 instance=ExtResource("8_3urhr")]
+modulate = Color(0.926813, 0.893049, 0.978125, 1)
+layout_mode = 0
+offset_left = -45.0
+offset_top = 49.0
+offset_right = 20.0
+offset_bottom = 129.0
+
+[node name="Knob13" parent="FusionControl/FusionInformation/Knobs" unique_id=475293973 instance=ExtResource("8_3urhr")]
+modulate = Color(0.926813, 0.893049, 0.978125, 1)
+layout_mode = 0
+offset_left = -39.0
+offset_top = 34.0
+offset_right = 26.0
+offset_bottom = 114.0
+
+[node name="Knob14" parent="FusionControl/FusionInformation/Knobs" unique_id=520611792 instance=ExtResource("8_3urhr")]
+modulate = Color(0.926813, 0.893049, 0.978125, 1)
+layout_mode = 0
+offset_left = -32.0
+offset_top = 49.0
+offset_right = 33.0
+offset_bottom = 129.0
+
+[node name="ColorIndicator" type="TextureRect" parent="FusionControl/FusionInformation" unique_id=104300630]
+material = SubResource("ShaderMaterial_lg1jf")
+layout_mode = 0
+offset_left = -43.0
+offset_top = 25.5
+offset_right = -3.0
+offset_bottom = 65.5
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_20phi")
+stretch_mode = 2
+
+[node name="ColorIndicatorLight" parent="FusionControl/FusionInformation/ColorIndicator" unique_id=668730316 instance=ExtResource("5_fuhhw")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 0.627451)
+material = SubResource("ShaderMaterial_v5qf0")
+position = Vector2(16.6667, 16.6667)
+scale = Vector2(1, 1)
+
+[node name="EnergyIndicator" type="TextureRect" parent="FusionControl/FusionInformation" unique_id=964075612]
+material = SubResource("ShaderMaterial_lg1jf")
+layout_mode = 0
+offset_left = -43.0
+offset_top = 35.5
+offset_right = -3.0
+offset_bottom = 75.5
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_20phi")
+stretch_mode = 2
+
+[node name="EnergyLight" parent="FusionControl/FusionInformation/EnergyIndicator" unique_id=1285616871 instance=ExtResource("5_fuhhw")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 0.627451)
+material = SubResource("ShaderMaterial_v5qf0")
+position = Vector2(16.6667, 16.6667)
+scale = Vector2(1, 1)
+
+[node name="FusionSeenItem" type="TextureRect" parent="FusionControl/FusionInformation" unique_id=802884115]
+material = SubResource("ShaderMaterial_lg1jf")
+layout_mode = 0
+offset_left = -34.0
+offset_top = 35.5
+offset_right = 6.0
+offset_bottom = 75.5
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_20phi")
+stretch_mode = 2
+
+[node name="SeenLight" parent="FusionControl/FusionInformation/FusionSeenItem" unique_id=1645300145 instance=ExtResource("5_fuhhw")]
+unique_name_in_owner = true
+modulate = Color(1, 0.447059, 0.447059, 1)
+self_modulate = Color(1, 1, 1, 0.627451)
+material = SubResource("ShaderMaterial_v5qf0")
+position = Vector2(16.6667, 16.6667)
+scale = Vector2(1, 1)
+
+[node name="ExcessEnergyIndicator" type="TextureRect" parent="FusionControl/FusionInformation" unique_id=332098469]
+material = SubResource("ShaderMaterial_lg1jf")
+layout_mode = 0
+offset_left = -34.0
+offset_top = 25.5
+offset_right = 6.0
+offset_bottom = 65.5
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_20phi")
+stretch_mode = 2
+
+[node name="ExcessLight" parent="FusionControl/FusionInformation/ExcessEnergyIndicator" unique_id=2052003181 instance=ExtResource("5_fuhhw")]
+unique_name_in_owner = true
+modulate = Color(0.899746, 0.728125, 1, 1)
+material = SubResource("ShaderMaterial_v5qf0")
+position = Vector2(16.6667, 16.6667)
+scale = Vector2(1, 1)
+
+[node name="TagIcons" type="GridContainer" parent="FusionControl/FusionInformation" unique_id=758787902]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_v4i17")
+layout_direction = 3
+layout_mode = 1
+offset_left = 22.0
+offset_top = 65.0
+offset_right = 108.0
+offset_bottom = 105.0
+columns = 6
+
+[node name="NeighborIcons" type="Control" parent="FusionControl/FusionInformation" unique_id=720294738]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 192.0
+offset_top = 45.5
+offset_right = 232.0
+offset_bottom = 85.5
+mouse_filter = 2
+script = ExtResource("10_ngtur")
+
+[node name="FusionWheel" type="Control" parent="FusionControl" unique_id=1401130084 node_paths=PackedStringArray("tri_top", "tri_bot", "ring", "tube", "button", "turn_timer")]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 68.0
+offset_top = 72.5
+offset_right = 195.0
+offset_bottom = 72.5
+script = ExtResource("11_2mcib")
+tri_top = NodePath("TriangleForward")
+tri_bot = NodePath("TriangleBack")
+ring = NodePath("Ring")
+tube = NodePath("Tube")
+button = NodePath("../FusionButton")
+turn_timer = NodePath("TurnTimer")
+deaccel = 1.0
+accel = 1.5
+
+[node name="Plasma" type="ColorRect" parent="FusionControl/FusionWheel" unique_id=1480129478]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_ftwjj")
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_left = -34.0
+offset_top = -90.0
+offset_right = 6.0
+offset_bottom = -50.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="FusionControl/FusionWheel" unique_id=752977034]
+visible = false
+layout_mode = 0
+offset_left = -72.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 72.0
+pivot_offset = Vector2(100, 100)
+
+[node name="Tube" type="TextureRect" parent="FusionControl/FusionWheel" unique_id=2141705862]
+modulate = Color(0.592056, 0.592056, 0.592056, 1)
+material = SubResource("ShaderMaterial_7y0q4")
+layout_mode = 0
+offset_left = 34.0
+offset_top = -38.0
+offset_right = 84.0
+offset_bottom = -22.0
+mouse_filter = 2
+texture = ExtResource("13_k3g7a")
+stretch_mode = 2
+
+[node name="Tube2" type="TextureRect" parent="FusionControl/FusionWheel" unique_id=1168474059]
+modulate = Color(0.592056, 0.592056, 0.592056, 1)
+material = SubResource("ShaderMaterial_7y0q4")
+layout_mode = 0
+offset_left = 55.0
+offset_top = -60.5
+offset_right = 101.0
+offset_bottom = -0.5
+mouse_filter = 2
+texture = ExtResource("14_vde41")
+stretch_mode = 2
+
+[node name="TriangleBack" type="TextureRect" parent="FusionControl/FusionWheel" unique_id=151289505]
+modulate = Color(0.757069, 0.757069, 0.757069, 1)
+material = SubResource("ShaderMaterial_atidy")
+instance_shader_parameters/brightness = 1.0
+layout_mode = 0
+offset_top = -60.0
+offset_right = 58.0
+offset_bottom = -9.0
+grow_vertical = 2
+scale = Vector2(1, -1)
+pivot_offset = Vector2(28.5, 33)
+texture = ExtResource("15_6q0t5")
+stretch_mode = 2
+
+[node name="TriangleForward" type="TextureRect" parent="FusionControl/FusionWheel" unique_id=2039260471]
+material = SubResource("ShaderMaterial_wpb2t")
+layout_mode = 0
+offset_top = -60.0
+offset_right = 58.0
+offset_bottom = -9.0
+pivot_offset = Vector2(28.5, 33)
+texture = ExtResource("15_6q0t5")
+stretch_mode = 2
+
+[node name="Ring" type="TextureRect" parent="FusionControl/FusionWheel" unique_id=488310838]
+modulate = Color(0.629947, 0.629947, 0.629947, 1)
+material = SubResource("ShaderMaterial_imtkg")
+layout_mode = 0
+offset_left = -16.0
+offset_top = -73.0
+offset_right = 111.0
+offset_bottom = 15.0
+mouse_filter = 2
+texture = ExtResource("16_lek0i")
+stretch_mode = 2
+
+[node name="TurnTimer" type="Timer" parent="FusionControl/FusionWheel" unique_id=2091831925]
+wait_time = 1.5
+one_shot = true
+
+[node name="ResultPositions" type="Control" parent="FusionControl" unique_id=805277848]
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 3.5
+offset_right = 73.0
+offset_bottom = 43.5
+mouse_filter = 2
+
+[node name="ResultSlotPosition" type="Control" parent="FusionControl/ResultPositions" unique_id=1371460181]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 53.0
+offset_top = 29.0
+offset_right = 93.0
+offset_bottom = 69.0
+
+[node name="SourcePositions" type="Control" parent="FusionControl" unique_id=1201125429]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 65.0
+offset_top = 83.5
+offset_right = 192.0
+offset_bottom = 83.5
+script = ExtResource("17_p73um")
+
+[node name="Slot1" type="Control" parent="FusionControl/SourcePositions" unique_id=2055542352]
+anchors_preset = 0
+offset_left = -6.0
+offset_top = -34.0
+offset_right = 34.0
+offset_bottom = 6.0
+mouse_filter = 2
+
+[node name="Slot2" type="Control" parent="FusionControl/SourcePositions" unique_id=1153202447]
+anchors_preset = 0
+offset_left = 21.0
+offset_top = -19.0
+offset_right = 61.0
+offset_bottom = 21.0
+mouse_filter = 2
+
+[node name="Slot3" type="Control" parent="FusionControl/SourcePositions" unique_id=225296531]
+anchors_preset = 0
+offset_left = -6.0
+offset_top = -68.0
+offset_right = 34.0
+offset_bottom = -28.0
+mouse_filter = 2
+
+[node name="Slot4" type="Control" parent="FusionControl/SourcePositions" unique_id=118440263]
+anchors_preset = 0
+offset_left = 21.0
+offset_top = -83.0
+offset_right = 61.0
+offset_bottom = -43.0
+mouse_filter = 2
+
+[node name="Slot5" type="Control" parent="FusionControl/SourcePositions" unique_id=1852608781]
+anchors_preset = 0
+offset_left = 48.0
+offset_top = -67.0
+offset_right = 88.0
+offset_bottom = -27.0
+mouse_filter = 2
+
+[node name="Slot6" type="Control" parent="FusionControl/SourcePositions" unique_id=1604959020]
+anchors_preset = 0
+offset_left = 47.0
+offset_top = -34.0
+offset_right = 87.0
+offset_bottom = 6.0
+mouse_filter = 2
+
+[node name="FusionResult" type="Control" parent="FusionControl" unique_id=1344720498 node_paths=PackedStringArray("position_control")]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 3.5
+offset_right = 73.0
+offset_bottom = 43.5
+mouse_filter = 2
+script = ExtResource("18_gs2ni")
+position_control = NodePath("../ResultPositions")
+inventory_slot_scene = ExtResource("19_7w5va")
+can_accept = false
+slots_have_output_icon = true
+override_slot_positions = true
+
+[node name="FusionSource" type="Control" parent="FusionControl" unique_id=1354653400 node_paths=PackedStringArray("position_control")]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 3.5
+offset_right = 73.0
+offset_bottom = 43.5
+mouse_filter = 2
+script = ExtResource("18_gs2ni")
+position_control = NodePath("../SourcePositions")
+inventory_slot_scene = ExtResource("19_7w5va")
+slots_have_input_icon = true
+override_slot_positions = true
+
+[node name="FusionButton" type="TextureButton" parent="FusionControl" unique_id=284667016]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_whhlx")
+layout_mode = 0
+offset_left = 146.0
+offset_top = 32.5
+offset_right = 167.0
+offset_bottom = 53.5
+focus_mode = 0
+action_mode = 0
+texture_normal = ExtResource("20_2byn6")
+texture_pressed = ExtResource("21_7tuu0")
+texture_hover = ExtResource("22_kcxn5")
+texture_disabled = ExtResource("21_7tuu0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="FusionControl/FusionButton" unique_id=1645634464]
+stream = ExtResource("23_t5bch")
+
+[node name="MultButton" type="TextureButton" parent="FusionControl" unique_id=367504910]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_whhlx")
+layout_mode = 0
+offset_left = 138.0
+offset_top = 4.0
+offset_right = 159.0
+offset_bottom = 25.0
+focus_mode = 0
+action_mode = 0
+texture_normal = ExtResource("24_b7px8")
+texture_pressed = ExtResource("25_pkp1w")
+texture_hover = ExtResource("26_mt4uw")
+texture_disabled = ExtResource("25_pkp1w")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="FusionControl/MultButton" unique_id=970909856]
+stream = ExtResource("23_t5bch")
+
+[node name="RefillButton" type="TextureButton" parent="FusionControl" unique_id=1450276471]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_whhlx")
+layout_mode = 0
+offset_left = 138.0
+offset_top = 61.0
+offset_right = 159.0
+offset_bottom = 82.0
+focus_mode = 0
+action_mode = 0
+texture_normal = ExtResource("27_im3tx")
+texture_pressed = ExtResource("28_xp7fi")
+texture_hover = ExtResource("29_vpw68")
+texture_disabled = ExtResource("28_xp7fi")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="FusionControl/RefillButton" unique_id=1085503201]
+stream = ExtResource("23_t5bch")
+
+[node name="FusionPredictionIcon" type="TextureRect" parent="FusionControl" unique_id=309775138]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_3niuq")
+layout_mode = 0
+offset_left = 33.0
+offset_top = 3.5
+offset_right = 54.0
+offset_bottom = 24.5
+mouse_filter = 2
+texture = ExtResource("32_55had")
+stretch_mode = 2
+script = ExtResource("33_afi5g")
+
+[node name="FusionTimer" type="Timer" parent="FusionControl" unique_id=593115670]
+unique_name_in_owner = true
+wait_time = 0.85
+one_shot = true
+
+[node name="UpPlayer" type="AudioStreamPlayer" parent="FusionControl" unique_id=2019703631]
+unique_name_in_owner = true
+stream = ExtResource("23_t5bch")
+volume_db = -17.0
+bus = &"UI SFX"
+
+[node name="DownPlayer" type="AudioStreamPlayer" parent="FusionControl" unique_id=1556532696]
+unique_name_in_owner = true
+stream = ExtResource("34_vtn4h")
+volume_db = -17.0
+bus = &"UI SFX"
+
+[node name="FusionPlayer" type="AudioStreamPlayer" parent="FusionControl" unique_id=857565478]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_r30io")
+volume_db = -21.0
+pitch_scale = 1.4
+max_polyphony = 3
+bus = &"UI SFX"

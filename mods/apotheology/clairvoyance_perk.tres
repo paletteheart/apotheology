@@ -1,0 +1,11 @@
+[gd_resource type="Resource" format=3 uid="uid://dsjbsd5u2sup5"]
+
+[ext_resource type="Script" uid="uid://dp80ipok6w3dp" path="res://mods/apotheology/clairvoyance_perk.gd" id="1_xa4ks"]
+
+[resource]
+script = ExtResource("1_xa4ks")
+display_name = "clairvoyance surge"
+base_description = "increase ajna by %d."
+proportion = 2.0
+color = Color(0.7751577, 0.9018021, 1, 1)
+metadata/_custom_type_script = "uid://12lehjlkpylk"
